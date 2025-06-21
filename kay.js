@@ -67,3 +67,29 @@ document.querySelectorAll('.icon-circle').forEach(icon => {
         this.querySelector('i').style.transform = 'scale(1)';
     });
 });
+
+
+//Butterfy effect
+document.addEventListener('DOMContentLoaded', function() {
+    const butterfly = document.querySelector('.butterfly');
+    
+    // Add click effect for interactivity
+    butterfly.addEventListener('click', () => {
+        // Create a temporary scaling effect
+        butterfly.style.transform = 'scale(1.2)';
+        
+        // Reset after animation completes
+        setTimeout(() => {
+            butterfly.style.transform = '';
+        }, 300);
+    });
+    
+    // Add hover effect for wings
+    butterfly.addEventListener('mouseenter', () => {
+        butterfly.style.animationDuration = '4s';
+    });
+    
+    butterfly.addEventListener('mouseleave', () => {
+        butterfly.style.animationDuration = '6s';
+    });
+});

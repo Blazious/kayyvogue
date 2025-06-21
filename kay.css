@@ -547,6 +547,99 @@ footer {
   color: rgba(255, 255, 255, 0.7);
 }
 
+
+/* Butterfly CSS */
+.butterfly-container {
+    position: relative;
+    width: 60px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.butterfly {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 5px;
+    left: 10px;
+    animation: float 4s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.wing {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.wing.left {
+    width: 20px;
+    height: 30px;
+    background: linear-gradient(135deg, #ff9ebb, #ff6b8b);
+    transform: rotate(-30deg) translateX(-5px);
+    left: 0;
+    top: 5px;
+    z-index: 1;
+}
+
+.wing.right {
+    width: 20px;
+    height: 30px;
+    background: linear-gradient(225deg, #ff9ebb, #ff6b8b);
+    transform: rotate(30deg) translateX(5px);
+    right: 0;
+    top: 5px;
+    z-index: 1;
+}
+
+.body {
+    position: absolute;
+    width: 4px;
+    height: 30px;
+    background: #333;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    z-index: 2;
+}
+
+.antenna {
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background: #333;
+    top: 5px;
+    z-index: 2;
+}
+
+.antenna.left {
+    left: 18px;
+    transform: rotate(-30deg);
+}
+
+.antenna.right {
+    right: 18px;
+    transform: rotate(30deg);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Optional hover effect */
+.butterfly:hover {
+    animation-duration: 1.5s;
+    transform: scale(1.1);
+}
+
+/* If you want the butterfly to appear on hover of the logo */
+.logo:hover .butterfly {
+    animation-duration: 1.5s;
+    transform: scale(1.1);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .header-content {
@@ -577,4 +670,10 @@ footer {
     width: 40px;
     height: 40px;
   }
+}
+
+.creator {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 4px;
 }
