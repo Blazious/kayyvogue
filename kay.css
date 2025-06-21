@@ -677,3 +677,19 @@ footer {
     color: #888;
     margin-top: 4px;
 }
+
+
+.instagram-feed {
+  padding: 40px 0;
+}
+
+.instagram-feed .section-title h2 {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.instagram-feed i {
+  margin-left: 10px;
+  color: #c13584; /* Instagram's pink */
+}
